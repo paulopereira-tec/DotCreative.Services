@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCreative.Services.Storage", "DotCreative.Services.Storage\DotCreative.Services.Storage.csproj", "{07246880-3A38-4F4A-A914-28A526D1BFDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCreative.Services.StorageTests", "DotCreative.Services.StorageTests\DotCreative.Services.StorageTests.csproj", "{C91D12E1-1976-4F09-B12F-F288CD4B69C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07246880-3A38-4F4A-A914-28A526D1BFDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07246880-3A38-4F4A-A914-28A526D1BFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07246880-3A38-4F4A-A914-28A526D1BFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07246880-3A38-4F4A-A914-28A526D1BFDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91D12E1-1976-4F09-B12F-F288CD4B69C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91D12E1-1976-4F09-B12F-F288CD4B69C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91D12E1-1976-4F09-B12F-F288CD4B69C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91D12E1-1976-4F09-B12F-F288CD4B69C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02DE8FDB-C664-4CCC-91AA-32C26BAA32C7}
+	EndGlobalSection
+EndGlobal
