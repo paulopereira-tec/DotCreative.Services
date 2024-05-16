@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>BaaS - Biblioteca de integração bancária</Title>
+    <Company>DotCreative</Company>
+    <Description>O objetivo desta biblioteca é fornecer um meio de integração entre diversas plataformas bancárias e de pagamento de forma que seja possível acessar serviços financeiros de forma uniforme.</Description>
+    <PackageProjectUrl>https://github.com/paulopereira-tec/DotCreative.Servies.BaaS</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/paulopereira-tec/DotCreative.Servies.BaaS</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>OpenBanking, OpenFinance, Boletos, Pix, Cartão de Crédito, Cartão de Débito</PackageTags>
+    <PackageReleaseNotes>Integração com Banco Inter</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>bank-ico.png</PackageIcon>
+    <Copyright>DotCreative</Copyright>
+    <IncludeSymbols>False</IncludeSymbols>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\bank-ico.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+  </ItemGroup>
+
+</Project>

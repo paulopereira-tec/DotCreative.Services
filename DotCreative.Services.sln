@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotCreative.Services.BaaS", "DotCreative.Services.BaaS\DotCreative.Services.BaaS.csproj", "{58A371FA-6B10-4A34-81A0-204DF118587D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCreative.Services.BaaSTests", "DotCreative.Services.BaaSTests\DotCreative.Services.BaaSTests.csproj", "{F26EB96F-410A-4909-8322-A525BC8DB74A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58A371FA-6B10-4A34-81A0-204DF118587D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A371FA-6B10-4A34-81A0-204DF118587D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A371FA-6B10-4A34-81A0-204DF118587D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A371FA-6B10-4A34-81A0-204DF118587D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F26EB96F-410A-4909-8322-A525BC8DB74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26EB96F-410A-4909-8322-A525BC8DB74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26EB96F-410A-4909-8322-A525BC8DB74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26EB96F-410A-4909-8322-A525BC8DB74A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40D4D350-6EA6-405E-821D-C612AFD05741}
+	EndGlobalSection
+EndGlobal
