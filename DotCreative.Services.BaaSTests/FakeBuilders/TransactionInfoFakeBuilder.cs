@@ -36,9 +36,9 @@ public class TransactionInfoFakeBuilder
         return this;
     }
 
-    public TransactionInfo Build(PlatformResult platformResult, bool withBeneficiary = false)
+    public TransactionRequest Build(PlatformResponse platformResult, bool withBeneficiary = false)
     {
-        return new Faker<TransactionInfo>()
+        return new Faker<TransactionRequest>()
             .RuleFor(x => x.Receiver, PersonFakeBuilder.GenerateOne())
             .RuleFor(x => x.Payer, PersonFakeBuilder.GenerateOne())
             .RuleFor(x => x.Beneficary, PersonFakeBuilder.GenerateOne())
@@ -53,7 +53,7 @@ public class TransactionInfoFakeBuilder
             ;
     }
 
-    public IEnumerable<TransactionInfo> Build(PlatformResult platformResult, int quantity, bool withBeneficiary = false)
+    public IEnumerable<TransactionRequest> Build(PlatformResponse platformResult, int quantity, bool withBeneficiary = false)
     {
         for (int i = 0; i < quantity; i++)
         {

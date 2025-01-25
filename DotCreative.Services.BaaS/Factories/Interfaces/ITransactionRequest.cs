@@ -10,5 +10,5 @@ public interface ITransactionRequest
     /// <summary>
     /// Executa a solicitação da transação
     /// </summary>
-    Task<TransactionResult?> ExecuteAsync(TransactionInfo transactionInfo);
+    Task<TransactionResponse?> ExecuteAsync(TransactionRequest transactionInfo);
 }

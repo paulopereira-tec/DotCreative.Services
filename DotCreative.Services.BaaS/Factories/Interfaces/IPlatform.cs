@@ -11,5 +11,5 @@ public interface IPlatform
     /// Realiza a autenticação e autorização de acesso para com a plataforma/banco.
     /// </summary>
     /// <returns>Devolve as informações o contexto da contexão.</returns>
-    PlatformResult Authorize();
+    PlatformResponse Authorize();
 }

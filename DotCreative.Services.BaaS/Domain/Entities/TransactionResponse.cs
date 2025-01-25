@@ -3,7 +3,7 @@ using DotCreative.Services.BaaS.Domain.ValuesObject;
 
 namespace DotCreative.Services.BaaS.Domain.Entities;
 
-public class TransactionResult
+public class TransactionResponse
 {
     public ETransactionType TransactionType { get; set; }
     public Billet Billet { get; set; }

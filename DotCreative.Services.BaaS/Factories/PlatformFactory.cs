@@ -1,24 +1,24 @@
 ﻿using DotCreative.Services.BaaS.Domain.Entities;
 using DotCreative.Services.BaaS.Domain.Enums;
 using DotCreative.Services.BaaS.Factories.Interfaces;
-using DotCreative.Services.BaaS.Factories.PlatformFactories.BancoInter;
+using DotCreative.Services.BaaS.Factories.Platforms.Inter;
 
 namespace DotCreative.Services.BaaS.Factories;
 
 public class PlatformFactory
 {
-    private readonly IPlatform _platform;
+  private readonly IPlatform _platform;
 
-    public PlatformResult PlatformResult { get; }
+  public PlatformResponse PlatformResponse { get; }
 
-    public PlatformFactory(PlatformInfo platformInfo)
+  public PlatformFactory(PlatformRequest platformRequest)
+  {
+    switch (platformRequest.Platform)
     {
-        switch (platformInfo.Platform)
-        {
-            case EPlatform.Inter: _platform = new BancoInterPlatform(platformInfo); break;
-            default: throw new NotImplementedException();
-        }
-
-        PlatformResult = _platform.Authorize();
+      case EPlatform.Inter: _platform = new InterPlatform(platformRequest); break;
+      default: throw new NotImplementedException();
     }
+
+    PlatformResponse = _platform.Authorize();
+  }
 }

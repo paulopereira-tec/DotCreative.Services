@@ -1,26 +1,31 @@
 ﻿using DotCreative.Services.BaaS.Domain.Entities;
 using DotCreative.Services.BaaS.Domain.Enums;
 using DotCreative.Services.BaaS.Factories.Interfaces;
-using DotCreative.Services.BaaS.Factories.PlatformFactories.BancoInter;
+using DotCreative.Services.BaaS.Factories.Platforms.Inter;
 
 namespace DotCreative.Services.BaaS.Factories;
 
+/// <summary>
+/// Aqui, transação é tudo o que pode ser feito em uma plataforma bancária: pagamentos, criar boletos, consultar extratos, requisitar pagamentos, etc.
+/// </summary>
 public static class TransactionFactory
 {
-
-    public static async Task<TransactionResult?> ExecuteAsync(TransactionInfo transactionInfo)
+  /// <summary>
+  /// Executa a transação em conformidade com o tipo e plataforma requisitada.
+  /// </summary>
+  public static async Task<TransactionResponse?> ExecuteAsync(TransactionRequest transactionRequest)
+  {
+    ITransactionRequest _transactionRequest = transactionRequest.Platform.Platform switch
     {
-        ITransactionRequest _transactionRequest = transactionInfo.Platform.Platform switch
-        {
-            EPlatform.Inter => transactionInfo.Type switch
-            {
-                ETransactionType.CreateBillet => new BancoInterCreateBilletTransaction(),
-                ETransactionType.RequestBilletData => new BancoInterRequestBilletDataTransaction(),
-                _ => throw new NotImplementedException("Transação não implementada.")
-            }
-        };
+      EPlatform.Inter => transactionRequest.Type switch
+      {
+        ETransactionType.CreateBillet => new InterCreateBilletTransaction(),
+        ETransactionType.RequestBilletData => new InterRequestBilletDataTransaction(),
+        _ => throw new NotImplementedException("Transação não implementada.")
+      }
+    };
 
-        return await _transactionRequest.ExecuteAsync(transactionInfo);
-    }
+    return await _transactionRequest.ExecuteAsync(transactionRequest);
+  }
 
 }

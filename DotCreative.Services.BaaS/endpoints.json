@@ -1,0 +1,7 @@
+{
+  "Inter_BaseUrl_Sandbox": "https://cdpj.partners.bancointer.com.br",
+  "Inter_BaseUrl_Production": "https://cdpj.partners.bancointer.com.br",
+  "Inter_Autenticacao": "oauth/v2/token",
+  "Inter_Boleto_Arquivo": "cobranca/v3/cobrancas/{1}/pdf",
+  "Inter_Boleto_Criar": "cobranca/v3/cobrancas",
+}
